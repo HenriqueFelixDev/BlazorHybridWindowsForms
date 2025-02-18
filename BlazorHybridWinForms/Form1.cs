@@ -23,5 +23,9 @@ public partial class Form1 : Form
     {
         services.AddWindowsFormsBlazorWebView();
         services.AddMudServices();
+
+        #if DEBUG
+                services.AddBlazorWebViewDeveloperTools();
+        #endif
     }
 }
